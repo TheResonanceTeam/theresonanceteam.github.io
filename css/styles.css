@@ -1,4 +1,5 @@
 body {
+    transform-style: preserve-3d;
     margin: 0;
     padding: 0;
     font-family: 'Helvetica', sans-serif;
@@ -20,28 +21,55 @@ body {
 
 .project-card {
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
     width: 300px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the flex container */
+    padding-left: 20px; /* Add padding to the left */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card {
+    perspective: 1000px;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.section-header {
+    width: 100%;
+    align-items: center;
     text-align: center;
+    opacity: 0.5;
 }
 
 img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 80px; /* Reduce the max width of the icon */
+    max-height: 80px; /* Reduce the max height of the icon */
+    margin-right: 10px; /* Add some space between the icon and text */
+    margin-bottom: 20px;
 }
 
 .project-info {
-    padding: 20px;
+    padding: 10px; /* Reduce padding for a more compact look */
+    flex-grow: 1; /* Allow the content to grow and take remaining space */
+    margin-right: -30px !important;
 }
 
 h2 {
-    margin: 10px 0;
+    margin: 5px 0; /* Reduce margin for the title */
+}
+
+p {
+    margin: 5px 0; /* Reduce margin for paragraphs */
 }
 
 a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 10px; /* Reduce padding for the button */
     margin-top: 10px;
     background-color: #007bff; /* Apple's blue color */
     color: #fff;
