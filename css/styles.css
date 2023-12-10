@@ -63,6 +63,10 @@ footer {
         padding: 0;
     }
 
+    .navbar {
+        padding-bottom: 64px;
+    }
+
     .navbar-left {
         padding-top: 64px;
     }
