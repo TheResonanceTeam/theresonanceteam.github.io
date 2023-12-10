@@ -1,16 +1,112 @@
 body {
-    transform-style: preserve-3d;
     margin: 0;
     padding: 0;
     font-family: 'Helvetica', sans-serif;
-    background-color: #fff; /* White background */
-    color: #000; /* Black text color */
+    background-color: #fff;
+    color: #000;
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the content */
+    z-index: 1000;
+}
+
+.navbar h1 {
+    width: 100%;
+}
+
+footer {
+    background-color: #ffffff; /* Choose your preferred background color */
+    color: #000000; /* Choose your preferred text color */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 32vh; /* Push the footer to the bottom */
+}
+
+.project-info svg {
+    margin-top: 5px;
+}
+
+.project-info a {
+    text-align: top;
+}
+
+.navbar-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
     text-align: center;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the content */
+    z-index: 1000;
+}
+
+@media (max-width: 675px) {
+    .navbar-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: center; /* Center buttons horizontally */
+        width: 100%; /* Ensure buttons take full width */
+        padding: 0;
+    }
+
+    .navbar-left {
+        padding-top: 64px;
+    }
+
+    .navbar-buttons a {
+        margin: 5px 0; /* Add some vertical margin between items */
+    }
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0; /* Set margin to zero */
+}
+
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the buttons */
+.navbar-buttons a {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: all 0.2s;
+}
+
+.navbar-buttons a:hover {
+    transform: scale(1.2);
+    color: #007bff;
+}
+
+/* Style for the left button */
+.navbar-left a {
+    margin-left: auto; /* Push the button to the left */
+}
+
+.web-content {
+    margin-top: 200px;
 }
 
 .projects {
@@ -24,16 +120,18 @@ body {
     border-radius: 16px;
     overflow: hidden;
     width: 300px;
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Align items vertically in the flex container */
-    padding-left: 20px; /* Add padding to the left */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card {
     perspective: 1000px;
     margin: 0 !important;
+    margin-right: 12px !important;
     padding: 0 !important;
     width: 80px !important;
     height: 80px !important;
@@ -47,34 +145,37 @@ body {
 }
 
 img {
-    max-width: 80px; /* Reduce the max width of the icon */
-    max-height: 80px; /* Reduce the max height of the icon */
-    margin-right: 10px; /* Add some space between the icon and text */
+    max-width: 80px;
+    max-height: 80px;
+    margin-right: 10px;
     margin-bottom: 20px;
 }
 
 .project-info {
-    padding: 10px; /* Reduce padding for a more compact look */
-    flex-grow: 1; /* Allow the content to grow and take remaining space */
+    padding: 10px;
+    flex-grow: 1;
     margin-right: -30px !important;
 }
 
 h2 {
-    margin: 5px 0; /* Reduce margin for the title */
+    margin: 5px 0;
 }
 
 p {
-    margin: 5px 0; /* Reduce margin for paragraphs */
+    margin: 5px 0;
 }
 
-a {
+.project-card a {
     display: inline-block;
-    padding: 5px 10px; /* Reduce padding for the button */
+    padding: 5px 10px;
     margin-top: 10px;
-    background-color: #007bff; /* Apple's blue color */
+    background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
+    transition: all 0.2s;
 }
 
-/* Add any additional styling as needed */
+.project-card a:hover {
+    background-color: #0067d5;
+}
