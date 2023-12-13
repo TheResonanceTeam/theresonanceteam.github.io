@@ -201,7 +201,6 @@ img {
 .project-info {
     padding: 10px;
     flex-grow: 1;
-    margin-right: -30px !important;
 }
 
 h2 {
